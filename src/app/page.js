@@ -11,7 +11,6 @@ export default function Home() {
       desc: "สัมผัสเสน่ห์แห่งแก้วที่ถูกเป่าด้วยมือจากช่างฝีมือผู้ชำนาญการ",
       path: "/glass-blowing",
       imageUrl: "/img/glass-main.jpg",
-      // ปรับสีพื้นหลังการ์ดให้อุ่นขึ้นตามธีม
       bgColor: "bg-[#F5F2ED]" 
     },
     {
@@ -35,20 +34,17 @@ export default function Home() {
   ];
 
   return (
-    // เปลี่ยนสีพื้นหลังหลักเป็น #F5F2ED และตัวอักษรเป็น #332D29
     <div className="min-h-screen bg-[#F5F2ED] text-[#332D29] font-sans">
       
-      {/* Hero Section */}
+      {/* 1. Hero Section */}
       <section className="max-w-7xl mx-auto px-6 pt-20 pb-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            {/* เปลี่ยนสีกรอบและตัวอักษรเป็นโทนทองหม่น #C29958 */}
             <span className="inline-block px-4 py-1.5 rounded-full border border-[#C29958]/30 text-[#C29958] text-xs font-bold tracking-widest uppercase mb-6">
               Founded by HM Queen Sirikit
             </span>
             <h1 className="text-7xl md:text-8xl font-serif mb-8 leading-[0.9]">
               The Art of <br />
-              {/* เปลี่ยนสีเน้นเป็นสีทองหม่น */}
               <span className="italic text-[#C29958]">Giving.</span>
             </h1>
             <p className="text-lg text-[#5A524D] mb-10 max-w-md">
@@ -71,34 +67,41 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Showcase Section */}
-      {/* ปรับพื้นหลังส่วนนี้ให้สว่างเล็กน้อยแต่ยังคุมโทนอุ่น */}
+      {/* [NEW] 2. The Visionary Quote Section - สร้างความศรัทธา */}
+      <section className="py-24 bg-[#332D29] text-[#F5F2ED] relative overflow-hidden">
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <span className="text-[#C29958] text-4xl mb-6 block font-serif">“</span>
+          <h2 className="text-2xl md:text-3xl font-serif leading-relaxed mb-8 italic">
+            ข้าพเจ้าภูมิใจเสมอมาว่าคนไทยมีสายเลือดของช่างฝีมืออยู่ทุกคน <br className="hidden md:block"/>
+            ไม่ว่าจะเป็นชาวไร่ชาวนา หรืออาชีพใด...
+          </h2>
+          <p className="text-[#C29958] tracking-[0.2em] text-sm uppercase font-bold">
+            พระราชดำรัส สมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถ พระบรมราชชนนีพันปีหลวง
+          </p>
+        </div>
+        {/* ลายไทยจางๆ ด้านหลัง */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[30vw] opacity-[0.03] pointer-events-none font-serif">
+          THAI
+        </div>
+      </section>
+
+      {/* 3. Showcase Section */}
       <section className="bg-[#FAF9F6] py-32">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-4xl font-serif mb-12">Our Heritage Categories</h2>
           <div className="space-y-24">
             {highlights.map((item, index) => (
               <div key={item.id} className={`flex flex-col ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-16 items-center`}>
-                
                 <div className={`flex-1 w-full h-96 ${item.bgColor} rounded-3xl overflow-hidden relative shadow-sm border border-[#C29958]/10`}>
-                  <img 
-                    src={item.imageUrl} 
-                    alt={item.name}
-                    className="w-full h-full object-cover"
-                    onError={(e) => { 
-                      e.target.className = "hidden"; 
-                    }} 
-                  />
+                  <img src={item.imageUrl} alt={item.name} className="w-full h-full object-cover" />
                   <div className="absolute inset-0 flex items-center justify-center text-9xl opacity-10 pointer-events-none grayscale">
                     {item.id === "01" ? "🔮" : item.id === "02" ? "🎭" : "🎨"}
                   </div>
                 </div>
 
                 <div className="flex-1 space-y-6">
-                  {/* เปลี่ยนเลขลำดับให้จางลงเป็นสีทองหม่น */}
                   <span className="text-6xl font-serif text-[#C29958]/60">{item.id}</span>
                   <h3 className="text-3xl font-serif text-[#332D29]">{item.name}</h3>
-                  {/* เปลี่ยนสีหัวข้อภาษาอังกฤษเป็นสีทองหม่น */}
                   <p className="text-[#C29958] font-bold text-xs uppercase tracking-widest">{item.title}</p>
                   <p className="text-[#5A524D] text-lg leading-relaxed">{item.desc}</p>
                   <Link href={item.path} className="inline-block text-[#C29958] font-bold border-b-2 border-[#C29958] pb-1 hover:text-[#332D29] hover:border-[#332D29] transition-colors">
@@ -110,6 +113,63 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* [NEW] 4. Impact Numbers Section - ความน่าเชื่อถือ */}
+      <section className="py-24 max-w-7xl mx-auto px-6 border-y border-[#C29958]/20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+          <div>
+            <p className="text-4xl font-serif text-[#C29958] mb-2">500+</p>
+            <p className="text-[#5A524D] text-sm uppercase tracking-widest">สร้างอาชีพให้ชุมชน</p>
+          </div>
+          <div>
+            <p className="text-4xl font-serif text-[#C29958] mb-2">20+</p>
+            <p className="text-[#5A524D] text-sm uppercase tracking-widest">ส่งออกงานศิลป์ทั่วโลก</p>
+          </div>
+          <div>
+            <p className="text-4xl font-serif text-[#C29958] mb-2">40+</p>
+            <p className="text-[#5A524D] text-sm uppercase tracking-widest">ปีแห่งการสืบสาน</p>
+          </div>
+          <div>
+            <p className="text-4xl font-serif text-[#C29958] mb-2">100%</p>
+            <p className="text-[#5A524D] text-sm uppercase tracking-widest">งานทำมือประณีตศิลป์</p>
+          </div>
+        </div>
+      </section>
+
+      {/* [NEW] 5. Visitor Information & Map - ข้อมูลการเยี่ยมชม */}
+      <section className="py-32 max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-8">
+            <h2 className="text-4xl font-serif">Visit Our Centre</h2>
+            <div className="space-y-4 text-[#5A524D]">
+              <p className="flex items-start gap-4">
+                <span className="text-[#C29958] font-bold">📍</span>
+                ศูนย์ศิลปาชีพบางไทร เลขที่ 59 หมู่ 4 ต.ช้างใหญ่ อ.บางไทร จ.พระนครศรีอยุธยา
+              </p>
+              <p className="flex items-start gap-4">
+                <span className="text-[#C29958] font-bold">⏰</span>
+                เปิดทำการ: วันอังคาร - วันอาทิตย์ (09:00 - 16:00 น.) <br/> *ปิดทำการทุกวันจันทร์
+              </p>
+              <p className="flex items-start gap-4">
+                <span className="text-[#C29958] font-bold">📞</span>
+                ติดต่อสอบถาม: 035-366-252
+              </p>
+            </div>
+            <div className="pt-4">
+               <Button text="Get Directions" onClick={() => window.open('https://maps.google.com', '_blank')} />
+            </div>
+          </div>
+          
+          {/* Mockup Map - คุณสามารถเปลี่ยนเป็น <iframe> จริงของ Google Maps ได้ที่นี่ */}
+          <div className="h-[400px] bg-[#E5E1DA] rounded-3xl overflow-hidden shadow-inner grayscale hover:grayscale-0 transition-all duration-700">
+            <div className="w-full h-full flex items-center justify-center text-[#332D29]/30 italic">
+               {/* ใส่ <iframe src="..."> ตรงนี้ */}
+               [Google Maps Integration]
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
