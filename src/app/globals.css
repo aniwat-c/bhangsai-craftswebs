@@ -1,21 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* โทนอุ่น: Royal Amber & Earth */
+  --background: #F5F2ED; /* สีครีมงาช้าง */
+  --foreground: #332D29; /* สีน้ำตาลไหม้ */
+  --accent: #C29958;     /* สีทองหม่น */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent); /* เพิ่มสีทองหม่นให้เรียกใช้ใน Tailwind ได้ */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* โหมดมืดที่ยังคงความอุ่น (Deep Espresso) */
+    --background: #1A1816; 
+    --foreground: #E5E1DB;
   }
 }
 
@@ -23,4 +27,5 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease; /* เพิ่มความนุ่มนวลเวลาเปลี่ยนสี */
 }
