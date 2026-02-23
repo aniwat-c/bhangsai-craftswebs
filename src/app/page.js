@@ -156,16 +156,20 @@ export default function Home() {
               </p>
             </div>
             <div className="pt-4">
-               <Button text="Get Directions" onClick={() => window.open('https://maps.google.com', '_blank')} />
+               <Button text="Get Directions" onClick={() => window.open('https://maps.app.goo.gl/3Xp8U9Y7V3Q3xLzR7', '_blank')} />
             </div>
           </div>
           
           {/* Mockup Map - คุณสามารถเปลี่ยนเป็น <iframe> จริงของ Google Maps ได้ที่นี่ */}
+          {/* Google Maps Integration */}
           <div className="h-[400px] bg-[#E5E1DA] rounded-3xl overflow-hidden shadow-inner grayscale hover:grayscale-0 transition-all duration-700">
-            <div className="w-full h-full flex items-center justify-center text-[#332D29]/30 italic">
-               {/* ใส่ <iframe src="..."> ตรงนี้ */}
-               [Google Maps Integration]
-            </div>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3864.717145899912!2d100.4735503758364!3d14.38575098236113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2840742129757%3A0xe67592472e389445!2z4Lio4Li54LiZ4Lii4Liy4LiY4Li04Lie4Liy4LiK4Li14Lie4Liy4LiB4LmE4LiX4Lij!5e0!3m2!1sth!2sth!4v1708680000000!5m2!1sth!2sth" 
+              className="w-full h-full border-0"
+              allowFullScreen="" 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
         </div>
       </section>
