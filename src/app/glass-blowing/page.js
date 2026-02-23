@@ -8,19 +8,19 @@ export default function GlassBlowingPage() {
       step: "01",
       title: "The Melting",
       desc: "หลอมละลายทรายแก้วบริสุทธิ์ในเตาเผาอุณหภูมิสูงกว่า 1,200 องศาเซลเซียส...",
-      video: "/img/glass-step-1.mp4" // เปลี่ยนเป็นไฟล์วิดีโอ
+      image: "/img/glass-step-1.jpg"
     },
     {
       step: "02",
       title: "The Blowing",
       desc: "ใช้ท่อเหล็กยาวตักน้ำแก้วแล้วเป่าลมอย่างประณีต...",
-      video: "/img/glass-step-2.mp4" // เปลี่ยนเป็นไฟล์วิดีโอ
+      image: "/img/glass-step-2.jpg"
     },
     {
       step: "03",
       title: "The Shaping",
       desc: "ใช้เครื่องมือเฉพาะทางช่วยจัดแต่งสัดส่วนในขณะที่แก้วยังร้อนแดง...",
-      video: "/img/glass-step-3.mp4" // เปลี่ยนเป็นไฟล์วิดีโอ
+      image: "/img/glass-step-3.jpg"
     }
   ];
 
