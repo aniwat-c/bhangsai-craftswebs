@@ -149,28 +149,71 @@ export default function Home() {
         </div>
       </section>
 
-      {/* [NEW] 5. Bangsai Highlights: จุดไฮไลต์ภายในศูนย์ (เพิ่มเนื้อหาใหม่) */}
+      {/* [NEW] 5. Bangsai Highlights: จุดไฮไลต์ภายในศูนย์ (เวอร์ชันแสดงเนื้อหาค้างไว้) */}
       <section className="py-32 bg-[#F5F2ED]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-4xl font-serif mb-4 italic text-[#C29958]">Bangsai Highlights</h2>
-            <p className="text-[#5A524D] uppercase tracking-[0.3em] text-xs">จุดเช็กอินและนิทรรศการที่ไม่ควรพลาด</p>
+            <h2 className="text-4xl md:text-5xl font-serif mb-4 italic text-[#C29958]">Bangsai Highlights</h2>
+            <p className="text-[#5A524D] uppercase tracking-[0.3em] text-xs font-bold">สัมผัสความงามและวิถีชีวิตในพื้นที่จริง</p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all border border-[#C29958]/10 group">
-              <div className="w-12 h-12 bg-[#F5F2ED] rounded-xl flex items-center justify-center mb-6 text-[#C29958] group-hover:bg-[#C29958] group-hover:text-white transition-colors">🏛️</div>
-              <h4 className="text-xl font-serif mb-3">ศาลาพระมิ่งขวัญ</h4>
-              <p className="text-sm text-[#5A524D] leading-relaxed">อาคารทรงไทยประยุกต์ขนาดใหญ่ที่เป็นศูนย์รวมนิทรรศการและร้านจำหน่ายผลิตภัณฑ์ระดับมาสเตอร์พีซ</p>
+            {/* Highlight 1: ศาลาพระมิ่งขวัญ */}
+            <div className="relative h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl group">
+              <img 
+                src="/img/sala-pamingkhwan.jpg" 
+                alt="ศาลาพระมิ่งขวัญ" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              />
+              {/* แผ่นสีเข้มด้านล่างสำหรับรองรับตัวอักษรให้ค้างไว้ */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#332D29] via-[#332D29]/40 to-transparent"></div>
+              
+              <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                <span className="text-[#C29958] text-xs font-bold tracking-[0.2em] mb-3 border-l-2 border-[#C29958] pl-3 uppercase">Architectural Icon</span>
+                <h4 className="text-3xl font-serif text-white mb-4">ศาลาพระมิ่งขวัญ</h4>
+                <p className="text-stone-300 text-sm leading-relaxed mb-4">
+                  อาคารทรงไทยประยุกต์ 4 ชั้นที่สง่างามริมน้ำ เป็นศูนย์รวมงานหัตถกรรมชั้นครูและนิทรรศการผลงานมาสเตอร์พีซที่หาดูได้ยากจากฝีมือราษฎร
+                </p>
+                <div className="h-1 w-12 bg-[#C29958]/50"></div>
+              </div>
             </div>
-            <div className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all border border-[#C29958]/10 group">
-              <div className="w-12 h-12 bg-[#F5F2ED] rounded-xl flex items-center justify-center mb-6 text-[#C29958] group-hover:bg-[#C29958] group-hover:text-white transition-colors">🏡</div>
-              <h4 className="text-xl font-serif mb-3">หมู่บ้านอาชีพเกษตรกรรม</h4>
-              <p className="text-sm text-[#5A524D] leading-relaxed">จำลองวิถีชีวิตชาวไทยในภูมิภาคต่างๆ สัมผัสบรรยากาศบ้านเรือนและวัฒนธรรมท้องถิ่นอย่างใกล้ชิด</p>
+
+            {/* Highlight 2: หมู่บ้านอาชีพเกษตรกรรม */}
+            <div className="relative h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl group">
+              <img 
+                src="/img/village-life.jpg" 
+                alt="หมู่บ้านอาชีพเกษตรกรรม" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#332D29] via-[#332D29]/40 to-transparent"></div>
+              
+              <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                <span className="text-[#C29958] text-xs font-bold tracking-[0.2em] mb-3 border-l-2 border-[#C29958] pl-3 uppercase">Local Wisdom</span>
+                <h4 className="text-3xl font-serif text-white mb-4">หมู่บ้านเกษตรกรรม</h4>
+                <p className="text-stone-300 text-sm leading-relaxed mb-4">
+                  ชมความงามของบ้านเรือนไทย 4 ภูมิภาคที่จำลองไว้อย่างสมบูรณ์ สัมผัสวิถีชีวิตและวัฒนธรรมท้องถิ่นที่เรียบง่ายแต่เปี่ยมด้วยเสน่ห์ทางการใช้ชีวิต
+                </p>
+                <div className="h-1 w-12 bg-[#C29958]/50"></div>
+              </div>
             </div>
-            <div className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all border border-[#C29958]/10 group">
-              <div className="w-12 h-12 bg-[#F5F2ED] rounded-xl flex items-center justify-center mb-6 text-[#C29958] group-hover:bg-[#C29958] group-hover:text-white transition-colors">🦜</div>
-              <h4 className="text-xl font-serif mb-3">สวนนก & สถานแสดงพันธุ์สัตว์น้ำ</h4>
-              <p className="text-sm text-[#5A524D] leading-relaxed">พื้นที่พักผ่อนหย่อนใจสำหรับครอบครัว ท่ามกลางธรรมชาติและสิ่งมีชีวิตนานาพันธุ์ริมแม่น้ำเจ้าพระยา</p>
+
+            {/* Highlight 3: สวนนก & อควาเรียม */}
+            <div className="relative h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl group">
+              <img 
+                src="/img/nature-park.jpg" 
+                alt="สวนนกและอควาเรียม" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#332D29] via-[#332D29]/40 to-transparent"></div>
+              
+              <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                <span className="text-[#C29958] text-xs font-bold tracking-[0.2em] mb-3 border-l-2 border-[#C29958] pl-3 uppercase">Nature & Life</span>
+                <h4 className="text-3xl font-serif text-white mb-4">สวนนก & วังมัจฉา</h4>
+                <p className="text-stone-300 text-sm leading-relaxed mb-4">
+                  พักผ่อนหย่อนใจในสวนนกขนาดใหญ่และอุโมงค์ปลาน้ำจืด เรียนรู้ความหลากหลายทางชีวภาพริมแม่น้ำเจ้าพระยาที่เป็นแหล่งหล่อเลี้ยงชีวิต
+                </p>
+                <div className="h-1 w-12 bg-[#C29958]/50"></div>
+              </div>
             </div>
           </div>
         </div>
