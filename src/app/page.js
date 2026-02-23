@@ -60,6 +60,11 @@ export default function Home() {
           <div className="relative h-[500px] bg-[#E5E1DA] rounded-2xl overflow-hidden shadow-2xl">
               <img 
                 src="/img/hero-bg.jpg" 
+                alt="Featured Work"
+                className="absolute inset-0 w-full h-full object-cover"
+                onError={(e) => { 
+                  e.target.src = "https://db.sac.or.th/museum/images/Museum/279/01-002.JPG"; 
+                }} 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#332D29]/60 to-transparent"></div>
           </div>
