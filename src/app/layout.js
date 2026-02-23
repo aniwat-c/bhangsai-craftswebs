@@ -2,7 +2,7 @@ import './globals.css';
 import Navbar from './components/Navbar';
 
 export const metadata = {
-  title: 'IT Shop Online | Thai Craft Heritage',
+  title: 'ศูนย์ศิลปาชีพบางไทร - มรดกทางวัฒนธรรมไทย',
   description: 'ศูนย์ศิลปาชีพบางไทร - มรดกทางวัฒนธรรมไทย',
 };
 
