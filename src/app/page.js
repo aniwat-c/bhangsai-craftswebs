@@ -12,7 +12,7 @@ export default function Home() {
       path: "/glass-blowing",
       imageUrl: "/img/glass-main.jpg",
       // ปรับสีพื้นหลังการ์ดให้อุ่นขึ้นตามธีม
-      bgColor: "bg-[#F9F6F2]" 
+      bgColor: "bg-[#F5F2ED]" 
     },
     {
       id: "02",
@@ -21,7 +21,7 @@ export default function Home() {
       desc: "การออกแบบหัวโขนโดยบูรณาการวัสดุธรรมชาติกับลวดลายไทยประยุกต์สมัยใหม่",
       path: "/make-khon",
       imageUrl: "/img/khon-main.jpg", 
-      bgColor: "bg-[#FAF3E0]" 
+      bgColor: "bg-[#F5F2ED]" 
     },
     {
       id: "03",
@@ -30,7 +30,7 @@ export default function Home() {
       desc: "การผสมผสานวัสดุธรรมชาติเข้ากับลวดลายไทยประยุกต์ที่ร่วมสมัย",
       path: "/fine-arts",
       imageUrl: "/img/pattern-main.jpg", 
-      bgColor: "bg-[#F2EFE9]" 
+      bgColor: "bg-[#F5F2ED]" 
     }
   ];
 
@@ -60,11 +60,6 @@ export default function Home() {
           <div className="relative h-[500px] bg-[#E5E1DA] rounded-2xl overflow-hidden shadow-2xl">
               <img 
                 src="/img/hero-bg.jpg" 
-                alt="Featured Work"
-                className="absolute inset-0 w-full h-full object-cover"
-                onError={(e) => { 
-                  e.target.src = "https://db.sac.or.th/museum/images/Museum/279/01-002.JPG"; 
-                }} 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#332D29]/60 to-transparent"></div>
           </div>
@@ -96,7 +91,7 @@ export default function Home() {
 
                 <div className="flex-1 space-y-6">
                   {/* เปลี่ยนเลขลำดับให้จางลงเป็นสีทองหม่น */}
-                  <span className="text-6xl font-serif text-[#C29958]/20">{item.id}</span>
+                  <span className="text-6xl font-serif text-[#C29958]/60">{item.id}</span>
                   <h3 className="text-3xl font-serif text-[#332D29]">{item.name}</h3>
                   {/* เปลี่ยนสีหัวข้อภาษาอังกฤษเป็นสีทองหม่น */}
                   <p className="text-[#C29958] font-bold text-xs uppercase tracking-widest">{item.title}</p>
