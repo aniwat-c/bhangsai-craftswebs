@@ -25,16 +25,20 @@ export default function GlassBlowingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FCFAf7] text-slate-900">
+    // เปลี่ยน bg-หลัก และ text-หลัก ตามธีม Royal Amber & Earth
+    <div className="min-h-screen bg-[#F5F2ED] text-[#332D29]">
+      
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden bg-gray-950">
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-50">
           <source src="/img/glass-hero-video.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-950/50 to-[#FCFAf7]"></div>
+        {/* ปรับ Gradient ให้กลืนเข้ากับสีพื้นหลังใหม่ #F5F2ED */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-950/50 to-[#F5F2ED]"></div>
         <div className="relative z-10 text-center px-6">
-          <span className="text-orange-500 font-bold tracking-[0.3em] uppercase text-sm mb-4 block">Masterpiece of Fire</span>
-          <h1 className="text-6xl md:text-8xl font-serif text-white mb-6">เป่าแก้ว <span className="italic text-orange-500">ศิลปะแห่งไฟ</span></h1>
+          {/* เปลี่ยนสีส้มเป็นสีทองหม่น #C29958 */}
+          <span className="text-[#C29958] font-bold tracking-[0.3em] uppercase text-sm mb-4 block">Masterpiece of Fire</span>
+          <h1 className="text-6xl md:text-8xl font-serif text-white mb-6">เป่าแก้ว <span className="italic text-[#C29958]">ศิลปะแห่งไฟ</span></h1>
           <p className="text-stone-300 max-w-2xl mx-auto text-lg">สัมผัสจิตวิญญาณแห่งช่างศิลป์บางไทร</p>
         </div>
       </section>
@@ -45,56 +49,59 @@ export default function GlassBlowingPage() {
           <div className="space-y-8">
             <h2 className="text-4xl md:text-5xl font-serif leading-tight">
               ความลับที่ซ่อนอยู่ใน <br />
-              <span className="text-orange-600">ความใสและลมหายใจ</span>
+              <span className="text-[#C29958]">ความใสและลมหายใจ</span>
             </h2>
-            <p className="text-slate-600 text-lg leading-relaxed border-l-4 border-orange-500 pl-6 italic">
+            {/* ปรับสีเส้นขอบเป็นสีทองหม่น */}
+            <p className="text-[#5A524D] text-lg leading-relaxed border-l-4 border-[#C29958] pl-6 italic">
               "มากกว่าการขึ้นรูป คือการถ่ายทอดความอ่อนช้อยของธรรมชาติลงบนวัสดุที่แข็งแกร่งแต่งดงาม..."
             </p>
             <div className="flex space-x-12 pt-4">
               <div>
-                <p className="text-3xl font-serif text-slate-900">จิตวิญญาณ</p>
-                <p className="text-xs uppercase tracking-widest text-orange-500 font-bold">Nature Inspired</p>
+                <p className="text-3xl font-serif text-[#332D29]">จิตวิญญาณ</p>
+                <p className="text-xs uppercase tracking-widest text-[#C29958] font-bold">Nature Inspired</p>
               </div>
               <div>
-                <p className="text-3xl font-serif text-slate-900">ความประณีต</p>
-                <p className="text-xs uppercase tracking-widest text-orange-500 font-bold">Beyond Craft</p>
+                <p className="text-3xl font-serif text-[#332D29]">ความประณีต</p>
+                <p className="text-xs uppercase tracking-widest text-[#C29958] font-bold">Beyond Craft</p>
               </div>
             </div>
           </div>
           
           <div className="relative group">
-            <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500 group-hover:shadow-orange-500/10">
+            <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500 group-hover:shadow-[#C29958]/20">
                <img 
                  src="/img/glass-main.jpg" 
                  alt="Thai Glass Art Peacock" 
                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                />
             </div>
-            <div className="absolute -z-10 inset-0 bg-orange-100 blur-[100px] opacity-50 rounded-full"></div>
+            {/* เอฟเฟกต์แสงฟุ้งเปลี่ยนเป็นสีทองอ่อนๆ */}
+            <div className="absolute -z-10 inset-0 bg-[#C29958]/10 blur-[100px] opacity-50 rounded-full"></div>
           </div>
         </div>
       </section>
 
       {/* Process Steps Section */}
-      <section className="bg-slate-900 py-32 text-white overflow-hidden">
+      {/* เปลี่ยน bg-slate-900 เป็นสีน้ำตาลเข้มเกือบดำเพื่อให้เข้าโทน Earth */}
+      <section className="bg-[#1E1B19] py-32 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-4xl font-serif mb-20 text-center">กระบวนการสร้างสรรค์</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {processes.map((p) => (
               <div key={p.step} className="group cursor-default">
-                <div className="relative h-64 bg-slate-800 rounded-2xl mb-8 overflow-hidden border border-white/5">
-                  {/* แก้ไขเป็นแท็ก img และเรียกใช้ p.image เรียบร้อยครับ */}
+                <div className="relative h-64 bg-[#2D2825] rounded-2xl mb-8 overflow-hidden border border-white/5">
                   <img 
                     src={p.image} 
                     alt={p.title}
                     className="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity duration-500"
                   />
-                  <span className="absolute top-6 left-6 text-5xl font-serif text-white/10 group-hover:text-orange-500/30 transition-colors">
+                  {/* เปลี่ยนเลขลำดับเป็นสีทองหม่นจางๆ ตามที่คุณชอบ */}
+                  <span className="absolute top-6 left-6 text-5xl font-serif text-white/10 group-hover:text-[#C29958]/50 transition-colors">
                     {p.step}
                   </span>
                 </div>
-                <h3 className="text-xl font-serif mb-4 group-hover:text-orange-400 transition-colors">{p.title}</h3>
-                <p className="text-slate-400 leading-relaxed text-sm">{p.desc}</p>
+                <h3 className="text-xl font-serif mb-4 group-hover:text-[#C29958] transition-colors">{p.title}</h3>
+                <p className="text-stone-400 leading-relaxed text-sm">{p.desc}</p>
               </div>
             ))}
           </div>
@@ -102,12 +109,14 @@ export default function GlassBlowingPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-32 text-center">
+      <section className="py-32 text-center bg-[#F5F2ED]">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-4xl font-serif mb-8">สัมผัสผลงานจริงด้วยตัวคุณเอง</h2>
           <div className="flex justify-center space-x-6">
             <Button text="จองรอบชมสาธิต" onClick={() => {}} />
-            <Link href="/" className="px-8 py-2.5 border border-stone-300 rounded-sm font-bold uppercase text-sm">กลับหน้าหลัก</Link>
+            <Link href="/" className="px-8 py-2.5 border border-[#C29958] text-[#C29958] rounded-sm font-bold uppercase text-sm hover:bg-[#C29958] hover:text-white transition-all">
+                กลับหน้าหลัก
+            </Link>
           </div>
         </div>
       </section>
