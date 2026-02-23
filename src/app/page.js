@@ -156,7 +156,7 @@ export default function Home() {
               </p>
             </div>
             <div className="pt-4">
-               <Button text="Get Directions" onClick={() => window.open('https://www.google.com/maps/place/%E0%B8%A8%E0%B8%B9%E0%B8%99%E0%B8%A2%E0%B9%8C%E0%B8%A8%E0%B8%B4%E0%B8%A5%E0%B8%9B%E0%B8%B2%E0%B8%8A%E0%B8%B5%E0%B8%9E%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B9%84%E0%B8%97%E0%B8%A3/@14.1542899,100.5172976,17z/data=!3m1!4b1!4m6!3m5!1s0x30e27b003d4ff85b:0x7352a68d6a487ccc!8m2!3d14.1542847!4d100.5198725!16s%2Fg%2F11yv8z3t2n?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D', '_blank')} />
+               <Button text="Get Directions" onClick={() => window.open('https://maps.app.goo.gl/qMacF3brcL9Yn1EZ8', '_blank')} />
             </div>
           </div>
           
@@ -164,7 +164,7 @@ export default function Home() {
           {/* Google Maps Integration */}
           <div className="h-[400px] bg-[#E5E1DA] rounded-3xl overflow-hidden shadow-inner grayscale hover:grayscale-0 transition-all duration-700">
             <iframe 
-              src="https://www.google.com/maps/place/%E0%B8%A8%E0%B8%B9%E0%B8%99%E0%B8%A2%E0%B9%8C%E0%B8%A8%E0%B8%B4%E0%B8%A5%E0%B8%9B%E0%B8%B2%E0%B8%8A%E0%B8%B5%E0%B8%9E%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B9%84%E0%B8%97%E0%B8%A3/@14.1542899,100.5172976,17z/data=!3m1!4b1!4m6!3m5!1s0x30e27b003d4ff85b:0x7352a68d6a487ccc!8m2!3d14.1542847!4d100.5198725!16s%2Fg%2F11yv8z3t2n?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D" 
+              src="https://maps.app.goo.gl/qMacF3brcL9Yn1EZ8" 
               className="w-full h-full border-0"
               allowFullScreen="" 
               loading="lazy" 
