@@ -29,7 +29,7 @@ export default function GlassBlowingPage() {
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden bg-gray-950">
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-50">
-          <source src="/img/glass-hero-video.mp4" type="video/mp4" />
+          <source src="/img/glass-hero-video.webm" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-950/50 to-[#FCFAf7]"></div>
         <div className="relative z-10 text-center px-6">
