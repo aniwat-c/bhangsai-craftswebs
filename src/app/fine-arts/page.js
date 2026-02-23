@@ -77,25 +77,6 @@ export default function ThaiDrawingPage() {
         </div>
       </section>
 
-      {/* [NEW] 3. Step-by-Step Evolution: ความสวยงามต้องใช้เวลา */}
-      <section className="py-24 bg-white/50">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-serif text-center mb-16 italic text-[#C29958]">วิวัฒนาการแห่งเส้นสาย</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {steps.map((step, index) => (
-              <div key={index} className="relative p-8 border border-[#C29958]/10 rounded-2xl hover:bg-white transition-all shadow-sm group">
-                <span className="text-5xl font-serif text-[#C29958]/20 absolute top-4 right-6 group-hover:text-[#C29958]/40">0{index + 1}</span>
-                <div className="h-48 bg-stone-100 rounded-xl mb-6 overflow-hidden">
-                  <img src={step.img} alt={step.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
-                </div>
-                <h4 className="text-xl font-bold mb-2 text-[#332D29]">{step.title}</h4>
-                <p className="text-sm text-[#8C837D] leading-relaxed">{step.detail}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* 4. Line Categories Section (เนื้อหาเดิม + เพิ่มความหมายมงคล) */}
       <section className="bg-[#1E1B19] py-32 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
