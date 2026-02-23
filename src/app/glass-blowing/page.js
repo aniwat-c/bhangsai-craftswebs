@@ -40,42 +40,40 @@ export default function GlassBlowingPage() {
       </section>
 
       {/* Story Section */}
-<section className="max-w-7xl mx-auto px-6 py-32">
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-    <div className="space-y-8">
-      <h2 className="text-4xl md:text-5xl font-serif leading-tight">
-        ความลับที่ซ่อนอยู่ใน <br />
-        <span className="text-orange-600">ความใสและลมหายใจ</span>
-      </h2>
-      <p className="text-slate-600 text-lg leading-relaxed border-l-4 border-orange-500 pl-6 italic">
-        "มากกว่าการขึ้นรูป คือการถ่ายทอดความอ่อนช้อยของธรรมชาติลงบนวัสดุที่แข็งแกร่งแต่งดงาม..."
-      </p>
-      <div className="flex space-x-12 pt-4">
-        <div>
-          <p className="text-3xl font-serif text-slate-900">จิตวิญญาณ</p>
-          <p className="text-xs uppercase tracking-widest text-orange-500 font-bold">Nature Inspired</p>
+      <section className="max-w-7xl mx-auto px-6 py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div className="space-y-8">
+            <h2 className="text-4xl md:text-5xl font-serif leading-tight">
+              ความลับที่ซ่อนอยู่ใน <br />
+              <span className="text-orange-600">ความใสและลมหายใจ</span>
+            </h2>
+            <p className="text-slate-600 text-lg leading-relaxed border-l-4 border-orange-500 pl-6 italic">
+              "มากกว่าการขึ้นรูป คือการถ่ายทอดความอ่อนช้อยของธรรมชาติลงบนวัสดุที่แข็งแกร่งแต่งดงาม..."
+            </p>
+            <div className="flex space-x-12 pt-4">
+              <div>
+                <p className="text-3xl font-serif text-slate-900">จิตวิญญาณ</p>
+                <p className="text-xs uppercase tracking-widest text-orange-500 font-bold">Nature Inspired</p>
+              </div>
+              <div>
+                <p className="text-3xl font-serif text-slate-900">ความประณีต</p>
+                <p className="text-xs uppercase tracking-widest text-orange-500 font-bold">Beyond Craft</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="relative group">
+            <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500 group-hover:shadow-orange-500/10">
+               <img 
+                 src="/img/glass-main.jpg" 
+                 alt="Thai Glass Art Peacock" 
+                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+               />
+            </div>
+            <div className="absolute -z-10 inset-0 bg-orange-100 blur-[100px] opacity-50 rounded-full"></div>
+          </div>
         </div>
-        <div>
-          <p className="text-3xl font-serif text-slate-900">ความประณีต</p>
-          <p className="text-xs uppercase tracking-widest text-orange-500 font-bold">Beyond Craft</p>
-        </div>
-      </div>
-    </div>
-    
-    <div className="relative group">
-      {/* ใช้รูปนกยูงที่คุณมี */}
-      <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500 group-hover:shadow-orange-500/10">
-         <img 
-           src="/img/glass-main.jpg" 
-           alt="Thai Glass Art Peacock" 
-           className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-         />
-      </div>
-      {/* เอฟเฟกต์แสงฟุ้งด้านหลังรูปเพื่อให้ดูละมุนเหมือนในภาพตัวอย่าง */}
-      <div className="absolute -z-10 inset-0 bg-orange-100 blur-[100px] opacity-50 rounded-full"></div>
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Process Steps Section */}
       <section className="bg-slate-900 py-32 text-white overflow-hidden">
@@ -85,16 +83,12 @@ export default function GlassBlowingPage() {
             {processes.map((p) => (
               <div key={p.step} className="group cursor-default">
                 <div className="relative h-64 bg-slate-800 rounded-2xl mb-8 overflow-hidden border border-white/5">
-                  {/* บรรทัดที่ 104: เปลี่ยนเป็นวิดีโอเรียบร้อยครับ */}
-                  <video 
-                    autoPlay 
-                    muted 
-                    loop 
-                    playsInline 
+                  {/* แก้ไขเป็นแท็ก img และเรียกใช้ p.image เรียบร้อยครับ */}
+                  <img 
+                    src={p.image} 
+                    alt={p.title}
                     className="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity duration-500"
-                  >
-                    <source src={p.video} type="video/mp4" />
-                  </video>
+                  />
                   <span className="absolute top-6 left-6 text-5xl font-serif text-white/10 group-hover:text-orange-500/30 transition-colors">
                     {p.step}
                   </span>
