@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#F5F2ED] text-[#332D29] font-sans">
       
-      {/* 1. Hero Section */}
+      {/* 1. Hero Section (เดิม) */}
       <section className="max-w-7xl mx-auto px-6 pt-20 pb-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -67,7 +67,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* [NEW] 2. The Visionary Quote Section - สร้างความศรัทธา */}
+      {/* [NEW] 2. The Origin: ประวัติความเป็นมา (เพิ่มเนื้อหาประวัติ) */}
+      <section className="py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col lg:flex-row gap-20 items-center">
+            <div className="lg:w-1/2 space-y-8">
+              <h2 className="text-5xl font-serif leading-tight">จุดกำเนิดแห่ง <br/><span className="text-[#C29958] italic">พระวิริยอุตสาหะ</span></h2>
+              <div className="space-y-6 text-[#5A524D] text-lg leading-relaxed">
+                <p>
+                  ก่อตั้งขึ้นเมื่อวันที่ 7 ธันวาคม พ.ศ. 2523 โดยสมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถ พระบรมราชชนนีพันปีหลวง เพื่อขยายผลจาก "มูลนิธิส่งเสริมศิลปาชีพฯ"
+                </p>
+                <p className="border-l-4 border-[#C29958] pl-6 italic">
+                  ทรงต้องการให้เกษตรกรมี "อาชีพเสริม" และอนุรักษ์ "งานช่างฝีมือไทย" ที่กำลังจะสูญหายไปให้คงอยู่สืบไปบนเนื้อที่กว่า 1,000 ไร่ ริมแม่น้ำเจ้าพระยา
+                </p>
+              </div>
+            </div>
+            <div className="lg:w-1/2 grid grid-cols-2 gap-4">
+              <div className="space-y-4">
+                <div className="h-64 bg-stone-200 rounded-2xl overflow-hidden">
+                   <img src="/img/history-1.jpg" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Bangsai History" />
+                </div>
+                <div className="p-6 bg-[#F5F2ED] rounded-2xl">
+                  <h4 className="font-bold text-[#C29958] mb-2">โรงเรียน & โรงงาน</h4>
+                  <p className="text-sm">ฝึกอบรมช่างศิลป์กว่า 30 แผนก พร้อมสนับสนุนที่พักและเบี้ยเลี้ยง</p>
+                </div>
+              </div>
+              <div className="space-y-4 pt-12">
+                <div className="p-6 bg-[#332D29] text-white rounded-2xl">
+                  <h4 className="font-bold text-[#C29958] mb-2">Masterpiece</h4>
+                  <p className="text-sm">งานศิลปะระดับสากลที่ถูกนำไปประดับตกแต่งสถานที่สำคัญทั่วโลก</p>
+                </div>
+                <div className="h-64 bg-stone-200 rounded-2xl overflow-hidden">
+                   <img src="/img/history-2.jpg" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="Thai Craft" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. The Visionary Quote Section (เดิม) */}
       <section className="py-24 bg-[#332D29] text-[#F5F2ED] relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <span className="text-[#C29958] text-4xl mb-6 block font-serif">“</span>
@@ -79,26 +118,22 @@ export default function Home() {
             พระราชดำรัส สมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถ พระบรมราชชนนีพันปีหลวง
           </p>
         </div>
-        {/* ลายไทยจางๆ ด้านหลัง */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[30vw] opacity-[0.03] pointer-events-none font-serif">
-          THAI
-        </div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[30vw] opacity-[0.03] pointer-events-none font-serif">THAI</div>
       </section>
 
-      {/* 3. Showcase Section */}
+      {/* 4. Showcase Section (เดิม) */}
       <section className="bg-[#FAF9F6] py-32">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-serif mb-12">Our Heritage Categories</h2>
+          <h2 className="text-4xl font-serif mb-12 italic border-b border-[#C29958]/20 pb-4">Our Heritage Categories</h2>
           <div className="space-y-24">
             {highlights.map((item, index) => (
               <div key={item.id} className={`flex flex-col ${index % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-16 items-center`}>
-                <div className={`flex-1 w-full h-96 ${item.bgColor} rounded-3xl overflow-hidden relative shadow-sm border border-[#C29958]/10`}>
-                  <img src={item.imageUrl} alt={item.name} className="w-full h-full object-cover" />
+                <div className={`flex-1 w-full h-96 ${item.bgColor} rounded-3xl overflow-hidden relative shadow-sm border border-[#C29958]/10 group`}>
+                  <img src={item.imageUrl} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
                   <div className="absolute inset-0 flex items-center justify-center text-9xl opacity-10 pointer-events-none grayscale">
                     {item.id === "01" ? "🔮" : item.id === "02" ? "🎭" : "🎨"}
                   </div>
                 </div>
-
                 <div className="flex-1 space-y-6">
                   <span className="text-6xl font-serif text-[#C29958]/60">{item.id}</span>
                   <h3 className="text-3xl font-serif text-[#332D29]">{item.name}</h3>
@@ -114,7 +149,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* [NEW] 4. Impact Numbers Section - ความน่าเชื่อถือ */}
+      {/* [NEW] 5. Bangsai Highlights: จุดไฮไลต์ภายในศูนย์ (เพิ่มเนื้อหาใหม่) */}
+      <section className="py-32 bg-[#F5F2ED]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl font-serif mb-4 italic text-[#C29958]">Bangsai Highlights</h2>
+            <p className="text-[#5A524D] uppercase tracking-[0.3em] text-xs">จุดเช็กอินและนิทรรศการที่ไม่ควรพลาด</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all border border-[#C29958]/10 group">
+              <div className="w-12 h-12 bg-[#F5F2ED] rounded-xl flex items-center justify-center mb-6 text-[#C29958] group-hover:bg-[#C29958] group-hover:text-white transition-colors">🏛️</div>
+              <h4 className="text-xl font-serif mb-3">ศาลาพระมิ่งขวัญ</h4>
+              <p className="text-sm text-[#5A524D] leading-relaxed">อาคารทรงไทยประยุกต์ขนาดใหญ่ที่เป็นศูนย์รวมนิทรรศการและร้านจำหน่ายผลิตภัณฑ์ระดับมาสเตอร์พีซ</p>
+            </div>
+            <div className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all border border-[#C29958]/10 group">
+              <div className="w-12 h-12 bg-[#F5F2ED] rounded-xl flex items-center justify-center mb-6 text-[#C29958] group-hover:bg-[#C29958] group-hover:text-white transition-colors">🏡</div>
+              <h4 className="text-xl font-serif mb-3">หมู่บ้านอาชีพเกษตรกรรม</h4>
+              <p className="text-sm text-[#5A524D] leading-relaxed">จำลองวิถีชีวิตชาวไทยในภูมิภาคต่างๆ สัมผัสบรรยากาศบ้านเรือนและวัฒนธรรมท้องถิ่นอย่างใกล้ชิด</p>
+            </div>
+            <div className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all border border-[#C29958]/10 group">
+              <div className="w-12 h-12 bg-[#F5F2ED] rounded-xl flex items-center justify-center mb-6 text-[#C29958] group-hover:bg-[#C29958] group-hover:text-white transition-colors">🦜</div>
+              <h4 className="text-xl font-serif mb-3">สวนนก & สถานแสดงพันธุ์สัตว์น้ำ</h4>
+              <p className="text-sm text-[#5A524D] leading-relaxed">พื้นที่พักผ่อนหย่อนใจสำหรับครอบครัว ท่ามกลางธรรมชาติและสิ่งมีชีวิตนานาพันธุ์ริมแม่น้ำเจ้าพระยา</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Impact Numbers Section (เดิม) */}
       <section className="py-24 max-w-7xl mx-auto px-6 border-y border-[#C29958]/20">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
           <div>
@@ -136,7 +198,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* [NEW] 5. Visitor Information & Map - ข้อมูลการเยี่ยมชม */}
+      {/* 7. Visitor Information & Map (เดิม) */}
       <section className="py-32 max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
@@ -156,21 +218,16 @@ export default function Home() {
               </p>
             </div>
             <div className="pt-4">
-               <Button text="Get Directions" onClick={() => window.open('https://maps.app.goo.gl/qMacF3brcL9Yn1EZ8', '_blank')} />
+               <Button text="Get Directions" onClick={() => window.open('https://maps.google.com', '_blank')} />
             </div>
           </div>
-          
-          {/* Mockup Map - คุณสามารถเปลี่ยนเป็น <iframe> จริงของ Google Maps ได้ที่นี่ */}
-          {/* Google Maps Integration */}
-          <div className="h-[400px] bg-[#E5E1DA] rounded-3xl overflow-hidden shadow-inner grayscale hover:grayscale-0 transition-all duration-700">
+          <div className="h-[400px] bg-[#E5E1DA] rounded-3xl overflow-hidden shadow-inner grayscale hover:grayscale-0 transition-all duration-700 border border-[#C29958]/10">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3866.5204218967595!2d100.51817457590216!3d14.28136358482939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e27bf06b948d79%3A0x717196823e2fbca2!2z4Lio4Li54Lii4Lia4Liy4LiH4Lie4Liy4LiY4Li14LiK4Li14Lie4Lia4Liy4LiH4Lia4Liy4LiH4LmE4LiX4Lii!5e0!3m2!1sth!2sth!4v1708695000000!5m2!1sth!2sth" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3864.717084534884!2d100.47355157584518!3d14.385750082260432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e20601f021f6a1%3A0xc47b97c83f98295b!2z4Lio4Li54LiZ4Lii4Liy4LiX4Li04Lie4Lit4Liy4LiK4Li14Lie4Liy4LiB4LmE4LiX4Lij!5e0!3m2!1sth!2sth!4v1710000000000!5m2!1sth!2sth" 
               className="w-full h-full border-0" 
               allowFullScreen={true} 
               loading="lazy" 
-              referrerPolicy="no-referrer-when-downgrade"
-            >
-            </iframe>
+            ></iframe>
           </div>
         </div>
       </section>
